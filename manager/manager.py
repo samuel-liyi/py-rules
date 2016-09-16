@@ -20,7 +20,7 @@ class Manager(object):
         for r in self.rules:
             res = r.execute()
             self.results[r] = res
-            print("the result of rule #{:s}# is {:b}".format(r.rule_name(), res))
+            print("the result of rule #{:s}# is {:s}".format(r.rule_name(), str(res)))
         return self.results[r]
 
 
