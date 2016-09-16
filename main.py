@@ -5,9 +5,8 @@ import pandas as Pd
 
 if __name__ == '__main__':
     d = Pd.DataFrame({'x': [1, 2, 3]})
-    m = Manager(d)
-    m.add_rule(NaiveRule("rule 1", {'max_v': 2}), {'x': 'x'})
-    m.add_rule(NaiveRule("rule 2", {'max_v': 4}), {'x': 'x'})
+    m = Manager()
+    m.add_rule(NaiveRule("rule 1", {'simple_list': d['x']}, param_max=2))
     m.execute()
 
 
