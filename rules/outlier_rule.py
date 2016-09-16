@@ -2,7 +2,7 @@ from rules.rule_base import BaseRule
 import pandas as pd
 
 
-class OutlierRule(BaseRule):
+class outlier_rule(BaseRule):
     def __init__(self, name, mapping, range=0.1, direction='upper'):
         self.name = name
         # rule specific attributes
